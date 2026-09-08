@@ -5,7 +5,6 @@ class produto{
     private $preco;
     private $desi;
     
-
     public function __contruct ($nomep, $preco, $desi){
         $this -> nomep = $nomep;
         $this -> preco = $preco;

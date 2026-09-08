@@ -1,5 +1,19 @@
 <?php
-require_once "conect.php";
+
+// 1. Declara normalmente
+function meuCarregadorDeClasses($classe) {
+    echo "Tentando carregar: " . $classe;
+    include 'aaa/' . $classe . '.php';
+}
+
+// 2. Registra passando o nome entre aspas
+spl_autoload_register('meuCarregadorDeClasses');
+
+
+echo "deu certo até aqui";
+
+$pdo = new conexaoBasic(); // esse troço da erro pq o banco não foi configurado
+
 
 $nomep = $_POST['nomep'];
 $preco = $_POST['preco'];
