@@ -27,7 +27,13 @@ class produto{
         $vsql->bindParam(":id", $this -> id);
          return $vsql -> fetch(); 
     }
-
+ public function Adeus(){
+        require "./conect.php";
+        $bora = $vai->prepare("DELETE produto WHERE id = :id");
+        return $bora->execute([
+            ':'
+        ])
+    }
    // public function sets e gets? DAO?
     
 }
