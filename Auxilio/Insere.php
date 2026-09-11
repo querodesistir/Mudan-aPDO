@@ -3,7 +3,7 @@
 // 1. Declara normalmente
 function meuCarregadorDeClasses($classe) {
     echo "Tentando carregar: " . $classe;
-    include 'aaa/' . $classe . '.php';
+    include '/' . $classe . '.php'; // como faz o caminho assim? Isso não é no Controllers?
 }
 
 // 2. Registra passando o nome entre aspas

@@ -26,8 +26,6 @@ class produto{
         $vsql->bindParam(":id", $this -> id);
          return $vsql -> fetch(); 
     }
-
-   // public function sets e gets? DAO?
     
 }
 ?>
