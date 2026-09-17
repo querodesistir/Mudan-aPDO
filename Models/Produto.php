@@ -26,6 +26,20 @@ class produto{
         $vsql->bindParam(":id", $this -> id);
          return $vsql -> fetch(); 
     }
-    
+    public function Apagro(){
+        require "./conect.php";
+        $vsql = $vai -> prepare("DELETE FROM produto WHERE id = :id");
+        $vsql -> bindParam(":id", $this -> id);
+           return $vsql -> execute();
+        }
+    public function Corripo(){
+        require "./conect.php";
+        $vsql = $vai -> prepare("UPDATE produto SET nomep = :np, preco = :pre, desi = :ds WHERE id = :id");
+         $vsql->bindParam(":np", $this -> nomep);
+        $vsql->bindParam(":pre", $this -> preco);
+        $vsql->bindParam(":ds", $this -> desi); 
+        $vsql->bindParam(":id", $this -> id);
+           return $vsql -> execute();
+    }
 }
 ?>
