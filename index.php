@@ -1,4 +1,4 @@
 <?php
     echo "Hello, World!";
-    header("Location: Insere.php");
+    header("Location: casita.html");
 ?>
